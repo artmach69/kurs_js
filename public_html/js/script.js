@@ -6,7 +6,7 @@
 
 
 var nazwaZmiennej = 2;
-var vat = 20;
+var vat = 23;
 var obliczonyVat = (1 + vat * 1/100);
 var cenaNettoJava = 39;
 var cenaNettoAjax = 34;
