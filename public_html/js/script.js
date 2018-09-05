@@ -13,9 +13,17 @@ var cenaNettoAjax = 34;
 var cenaBruttoJava = cenaNettoJava * obliczonyVat;
 
 var imie = "Artur";
-var nazwisko = "Machowski"
+var nazwisko = "Machowski";
 
-alert (imie + " " + nazwisko)
+alert (imie + " " + nazwisko);
 
 alert (cenaBruttoJava + " zł");
 
+var x = 5;
+x += 2;
+
+y = 5;
+alert (y++);
+alert (y+x);
+//alert (++x);
+//alert (x);
