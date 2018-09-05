@@ -5,11 +5,25 @@
  */
 
 
-var a = 5;
-var b = 7;
+var dzienTygodnia = 7;
 
-if (a<b)
-alert (a+b);
-
-else if (a>b);
-alert ("a>b");
+switch (dzienTygodnia)
+{
+    case 1:
+        alert ("dzisiaj jest poniedziałek");
+        breake;
+    case 2:
+        alert ("dzisiaj jest wtorek");
+        breake;
+    case 3:
+        alert ("dzisiaj jest środa");
+        breake;
+    case 4:
+        alert ("dzisiaj jest czwartek");
+        breake;
+    case 5:
+        alert ("dzisiaj jest piątek");
+        breake;
+    default:
+        alert ("nie ma takiego dnia w tygodniu");      
+}
