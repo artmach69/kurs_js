@@ -5,11 +5,11 @@
  */
 
 
-function test ()
+function test (x, y)
 {
- var dzienTygodnia = 1;
+var dzienTygodnia = x;
 
-switch (dzienTygodnia)
+/*switch (dzienTygodnia)
 {
     case 1:
         alert ("dzisiaj jest poniedziałek");
@@ -29,9 +29,11 @@ switch (dzienTygodnia)
     default:
         alert ("nie ma takiego dnia w tygodniu");      
 }
-    
-   
+    */
+   return x+y;
 }
 
-var a = test();
-alert (a);
+//var a = test(3);
+//alert (a);
+var sumazmiennych = test(5,7);
+alert (sumazmiennych);
