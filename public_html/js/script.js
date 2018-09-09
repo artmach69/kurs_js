@@ -5,7 +5,9 @@
  */
 
 
-var dzienTygodnia = 7;
+function test ()
+{
+ var dzienTygodnia = 1;
 
 switch (dzienTygodnia)
 {
@@ -27,3 +29,9 @@ switch (dzienTygodnia)
     default:
         alert ("nie ma takiego dnia w tygodniu");      
 }
+    
+   
+}
+
+var a = test();
+alert (a);
