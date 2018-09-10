@@ -5,20 +5,15 @@
  */
 
 
-var hi = function (type)
-{
-    if (type === "szef")
-    return function (name)
-    {
-        alert ("Cześć szefie " + name + "!");
-    };
-    else
-        return function (name)
-    {
-        alert ("Cześć" + name + "!");
-    };
-    
-};
+var div = document.getElementById("test");
+        
+div.innerHTML = "To jest test";
 
-var zwroconafunkcja = hi ("szef"); 
-zwroconafunkcja("Arek");
+
+var osoba = {
+             imie: "Arek", 
+             nazwisko: "Włodarczyk"
+            };
+            
+alert (osoba.imie);  
+div.innerHTML = osoba.nazwisko;
