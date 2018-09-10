@@ -5,35 +5,20 @@
  */
 
 
-function test (x, y)
+var hi = function (type)
 {
-var dzienTygodnia = x;
+    if (type === "szef")
+    return function (name)
+    {
+        alert ("Cześć szefie " + name + "!");
+    };
+    else
+        return function (name)
+    {
+        alert ("Cześć" + name + "!");
+    };
+    
+};
 
-/*switch (dzienTygodnia)
-{
-    case 1:
-        alert ("dzisiaj jest poniedziałek");
-        breake;
-    case 2:
-        alert ("dzisiaj jest wtorek");
-        breake;
-    case 3:
-        alert ("dzisiaj jest środa");
-        breake;
-    case 4:
-        alert ("dzisiaj jest czwartek");
-        breake;
-    case 5:
-        alert ("dzisiaj jest piątek");
-        breake;
-    default:
-        alert ("nie ma takiego dnia w tygodniu");      
-}
-    */
-   return x+y;
-}
-
-//var a = test(3);
-//alert (a);
-var sumazmiennych = test(5,7);
-alert (sumazmiennych);
+var zwroconafunkcja = hi ("szef"); 
+zwroconafunkcja("Arek");
