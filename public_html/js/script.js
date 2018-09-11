@@ -19,6 +19,8 @@ alert (osoba.imie);
 div.innerHTML = osoba.nazwisko;
 */
 
+var div = document.getElementById("test");
+
 function osoba(imie, nazwisko, wiek)
 {
     this.name = imie;
@@ -32,7 +34,11 @@ function osoba(imie, nazwisko, wiek)
 var x = new osoba("Arek", "Wlodarczyk", 25);
 var y = new osoba("Artur", "Machowski", 49);
 
-var div = document.getElementById("test");
-div.innerHTML = x + "<br>" + y;
+
+osoba.prototype.specifiedValue = 12;
+//x.specifiedValue = 12;
+
+
+div.innerHTML = x.specifiedValue + "<br>" + y.specifiedValue;
 
 //osoba.imie = "Wiola";
