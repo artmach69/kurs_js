@@ -19,26 +19,14 @@ alert (osoba.imie);
 div.innerHTML = osoba.nazwisko;
 */
 
-var div = document.getElementById("test");
-
-function osoba(imie, nazwisko, wiek)
-{
-    this.name = imie;
-    this.surname = nazwisko;
-    this.age = wiek;
-    this.toString = function ()
-    {
-        return this.name + " " + this.surname + " " + this.age;
-    };
-}
-var x = new osoba("Arek", "Wlodarczyk", 25);
-var y = new osoba("Artur", "Machowski", 49);
 
 
-osoba.prototype.specifiedValue = 12;
-//x.specifiedValue = 12;
+var produkty = [
+    "PHP",
+    "MySql",
+    "JavaScript"
+];
 
+produkty[produkty.length] = "PDO";
+alert(produkty[3]);
 
-div.innerHTML = x.specifiedValue + "<br>" + y.specifiedValue;
-
-//osoba.imie = "Wiola";
