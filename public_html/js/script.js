@@ -24,7 +24,7 @@ var liczby = [
 
 
 //produkty = produkty.concat(tmp);
-document.getElementById("rezultat").innerHTML = produkty.sort();
-document.getElementById("rezultat").innerHTML = liczby.sort(function (a,b) {return a-b});
+document.getElementById("rezultat").innerHTML = produkty.splice(1,3, "cos", "tak", "nie");
+//document.getElementById("rezultat").innerHTML = liczby.sort(function (a,b) {return a-b});
 document.getElementById("rezultat").innerHTML += "<br>-------------------------------<br>";
 document.getElementById("rezultat").innerHTML += produkty;
