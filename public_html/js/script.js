@@ -18,8 +18,10 @@ var produkty = [
     "Grunt.js"
 ];
 
-
+var tmp = ["mysql", "ajax"];
 produkty [produkty.length] = "asasa";
-document.getElementById("rezultat").innerHTML = produkty.length;
+
+produkty = produkty.concat(tmp);
+document.getElementById("rezultat").innerHTML = produkty.join("<br>");
 document.getElementById("rezultat").innerHTML += "<br>-------------------------------<br>";
 document.getElementById("rezultat").innerHTML += produkty;
