@@ -37,7 +37,7 @@ osoba["imie"] = "Arek";
 
 alert(osoba["imie"]);
 
-
-var ul = document.getElementById("kursyProgramowania");
-var liArray = ul.getElementsByTagName("li");
-alert(liArray[3].innerHTML);
+var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
+//var ul = document.getElementById("kursyProgramowania");
+//var liArray = ul.getElementsByTagName("li");
+alert(kursyProgramowania[2].innerHTML);
