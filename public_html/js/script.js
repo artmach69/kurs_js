@@ -5,39 +5,21 @@
  */
 
 
-/*var div = document.getElementById("test");
-        
-div.innerHTML = "To jest test";
 
-
-var osoba = {
-             imie: "Arek", 
-             nazwisko: "Włodarczyk"
-            };
-            
-alert (osoba.imie);  
-div.innerHTML = osoba.nazwisko;
-*/
 
 
 
 var produkty = [
     "PHP",
     "MySql",
-    "JavaScript"
+    "JavaScript",
+    "PDO",
+    "SASS",
+    "Grunt.js"
 ];
 
-produkty[produkty.length] = "PDO";
-alert(produkty[3]);
 
-
-var osoba = [];
-
-osoba["imie"] = "Arek";
-
-alert(osoba["imie"]);
-
-var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
-//var ul = document.getElementById("kursyProgramowania");
-//var liArray = ul.getElementsByTagName("li");
-alert(kursyProgramowania[2].innerHTML);
+produkty [produkty.length] = "asasa";
+document.getElementById("rezultat").innerHTML = produkty.length;
+document.getElementById("rezultat").innerHTML += "<br>-------------------------------<br>";
+document.getElementById("rezultat").innerHTML += produkty;
