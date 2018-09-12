@@ -18,10 +18,13 @@ var produkty = [
     "Grunt.js"
 ];
 
-var tmp = ["mysql", "ajax"];
-produkty [produkty.length] = "asasa";
+var liczby = [
+    2,3,56,89,11
+    ];
 
-produkty = produkty.concat(tmp);
-document.getElementById("rezultat").innerHTML = produkty.join("<br>");
+
+//produkty = produkty.concat(tmp);
+document.getElementById("rezultat").innerHTML = produkty.sort();
+document.getElementById("rezultat").innerHTML = liczby.sort(function (a,b) {return a-b});
 document.getElementById("rezultat").innerHTML += "<br>-------------------------------<br>";
 document.getElementById("rezultat").innerHTML += produkty;
