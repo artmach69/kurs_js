@@ -9,22 +9,39 @@
 
 
 
-var produkty = [
-    "PHP",
-    "MySql",
-    "JavaScript",
-    "PDO",
-    "SASS",
-    "Grunt.js"
+var kursyProgramowania = [
+    "C++",
+    "Java",
+    "C#",
+    "Pascal"
 ];
 
-var liczby = [
-    2,3,56,89,11
-    ];
+var rezultat = document.getElementById("rezultat");
 
+/*
+var i = 125;
 
-//produkty = produkty.concat(tmp);
-document.getElementById("rezultat").innerHTML = produkty.splice(1,3, "cos", "tak", "nie");
-//document.getElementById("rezultat").innerHTML = liczby.sort(function (a,b) {return a-b});
-document.getElementById("rezultat").innerHTML += "<br>-------------------------------<br>";
-document.getElementById("rezultat").innerHTML += produkty;
+while(i<kursProgramowania.length)
+    
+    {
+        rezultat.innerHTML += kursProgramowania[i]+"<br>";
+        i++;
+    }
+  */  
+   var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
+   
+   var i=0;
+   while (i < kursyProgramowania.length)
+   {
+   if (kursyProgramowania[i].innerHTML === "C++")
+       kursyProgramowania[i].innerHTML += "hit";
+   else
+       kursyProgramowania[i].innerHTML += "promo";
+   i++;
+   }
+ /*  do
+   {
+       alert (i);
+       i++;
+   }while (i<5);
+   */
