@@ -19,10 +19,9 @@ kursy = [
     "PHP"
 ];
 
-//alert (person.imie + " " + person.nazwosko);
-var wszystkieKursyWStringu = "";
-for (var property in kursy)
+for (var property in kursyProgramowania)
 {
-    wszystkieKursyWStringu += kursy[property];
+    if (typeof(kursyProgramowania[property]) !== "object")
+        break;
+    alert(kursyProgramowania[property].innerHTML);
 }
-alert (wszystkieKursyWStringu);
