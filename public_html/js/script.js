@@ -5,21 +5,24 @@
  */
 
 
+person = {
+    imie: "Arek",
+    nazwosko: "Włodarczyk",
+    age: "26"
+};
 
-
-  var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
+var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
   
-  for (var i=0; i < kursyProgramowania.length; i++)
-  {
-    if (i % 2 !==0)
-    kursyProgramowania[i].innerHTML = "parzysty: " + kursyProgramowania[i].innerHTML;
-else
-    continue;
-  }
+kursy = [
+    "Java",
+    "C++",
+    "PHP"
+];
 
-for (var i = 0; i < 6; i++)
+//alert (person.imie + " " + person.nazwosko);
+var wszystkieKursyWStringu = "";
+for (var property in kursy)
 {
-    if (i===4)
-        break;
-    alert(i);
+    wszystkieKursyWStringu += kursy[property];
 }
+alert (wszystkieKursyWStringu);
