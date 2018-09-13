@@ -15,7 +15,11 @@
     kursyProgramowania[i].innerHTML = "parzysty: " + kursyProgramowania[i].innerHTML;
 else
     continue;
-
-
-alert(i);
   }
+
+for (var i = 0; i < 6; i++)
+{
+    if (i===4)
+        break;
+    alert(i);
+}
