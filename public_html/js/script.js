@@ -7,11 +7,17 @@
 function addNumbers()
 {
   var suma=0;
-    for (i=0; i < arguments.length; i++)
+   /* for (i=0; i < arguments.length; i++)
     {
         suma += arguments[i];
     }
     return suma;
+*/
+    for (var property in arguments)
+    {
+        suma += arguments[property];
+    }
+return suma
 }
 
 var suma = addNumbers(4, 8, 12, 0);
