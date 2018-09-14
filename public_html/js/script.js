@@ -5,4 +5,5 @@
  */
 
 var kursyProgramowania = document.getElementById("kursyProgramowania");
-alert (kursyProgramowania.attributes[0].nodeValue);
+
+alert (kursyProgramowania.setAttribute("class", "zmienKolor"));
