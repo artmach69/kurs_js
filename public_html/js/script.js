@@ -4,21 +4,5 @@
  * and open the template in the editor.
  */
 
-function addNumbers()
-{
-  var suma=0;
-   /* for (i=0; i < arguments.length; i++)
-    {
-        suma += arguments[i];
-    }
-    return suma;
-*/
-    for (var property in arguments)
-    {
-        suma += arguments[property];
-    }
-return suma
-}
-
-var suma = addNumbers(4, 8, 12, 0);
-alert(suma);
+var kursyProgramowania = document.getElementById("kursyProgramowania");
+alert (kursyProgramowania.attributes[0].nodeValue);
