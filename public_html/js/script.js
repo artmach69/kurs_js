@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-var kursyProgramowania = document.getElementById("kursyProgramowania");
+var kursyProgramowania = document.querySelectorAll("#kursyProgramowania li");
 
-kursyProgramowania.childNodes[1].nextSibling.nodeValue = "coś nowego";
-alert (kursyProgramowania.childNodes[1].textContent);
+
+alert (kursyProgramowania[3].innerHTML);
