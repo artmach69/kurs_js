@@ -6,4 +6,5 @@
 
 var kursyProgramowania = document.getElementById("kursyProgramowania");
 
-alert (kursyProgramowania.setAttribute("class", "zmienKolor"));
+kursyProgramowania.childNodes[1].nextSibling.nodeValue = "coś nowego";
+alert (kursyProgramowania.childNodes[1].textContent);
