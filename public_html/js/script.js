@@ -4,24 +4,15 @@
  * and open the template in the editor.
  */
 
-
-person = {
-    imie: "Arek",
-    nazwosko: "Włodarczyk",
-    age: "26"
-};
-
-var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
-  
-kursy = [
-    "Java",
-    "C++",
-    "PHP"
-];
-
-for (var property in kursyProgramowania)
+function addNumbers()
 {
-    if (typeof(kursyProgramowania[property]) !== "object")
-        break;
-    alert(kursyProgramowania[property].innerHTML);
+  var suma=0;
+    for (i=0; i < arguments.length; i++)
+    {
+        suma += arguments[i];
+    }
+    return suma;
 }
+
+var suma = addNumbers(4, 8, 12, 0);
+alert(suma);
