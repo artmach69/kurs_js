@@ -7,4 +7,8 @@
 var kursyProgramowania = document.querySelectorAll("#kursyProgramowania li");
 
 
-alert (kursyProgramowania[3].innerHTML);
+for ( var index in kursyProgramowania)
+{
+
+kursyProgramowania[index].style.color = "blue";
+}
