@@ -16,3 +16,7 @@ var newChildNode = body.appendChild(x);
 
 var testowy2 = document.getElementById("testowy2");
 testowy2.style.color = "green";
+
+
+var kursyProgramowania = document.getElementById("kursyProgramowania");
+kursyProgramowania.parentNode.removeChild(kursyProgramowania);
