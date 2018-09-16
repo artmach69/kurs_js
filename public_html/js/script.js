@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 
-var kursyProgramowania = document.querySelectorAll("#kursyProgramowania li");
+var x = document.createElement("p");
 
+x.style.color = "red";
+x.className = "test";
+x.innerHTML = "<p id='testowy2'>nowy test<p>";
 
-for ( var index in kursyProgramowania)
-{
+var body = document.querySelector("body");
 
-kursyProgramowania[index].style.color = "blue";
-}
+var newChildNode = body.appendChild(x);
+
+var testowy2 = document.getElementById("testowy2");
+testowy2.style.color = "green";
