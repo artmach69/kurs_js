@@ -9,3 +9,11 @@ function wypiszTekst(tekst)
 {
     alert(tekst + "!!!!");
 }
+  
+
+var test = document.getElementById("test");
+ test.onclick = function()
+ {
+        
+        alert("Kliknąłeś");
+    };
