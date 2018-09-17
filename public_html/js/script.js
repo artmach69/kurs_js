@@ -6,16 +6,28 @@
 
 
 
-function zmienKolor()
+function powiekszFont()
 {
-    this.className = "zmienKolor";
+    this.className = "powiekszFont";
 }
 
-function zmienKolor1()
+function pomniejszFont()
 {
-   this.className = "";
+    this.className = "pomniejszFont";
 }
+
+
 var test = document.getElementById("test");
+var powieksz = document.getElementById("przycisk+");
+var pomniejsz = document.getElementById("przycisk-");
 
-test.onmouseover = zmienKolor;
-test.onmouseout = zmienKolor1;
+
+powieksz.onclick = function()
+{
+    test.powiekszFont;
+};
+
+pomniejsz.onclick = function()
+{
+    test.pomniejszFont;
+};
