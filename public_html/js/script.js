@@ -5,15 +5,17 @@
  */
 
 
-function wypiszTekst(tekst)
-{
-    alert(tekst + "!!!!");
-}
-  
 
+function zmienKolor()
+{
+    this.className = "zmienKolor";
+}
+
+function zmienKolor1()
+{
+   this.className = "";
+}
 var test = document.getElementById("test");
- test.onclick = function()
- {
-        
-        wypiszTekst("Kliknąłeś");
-    };
+
+test.onmouseover = zmienKolor;
+test.onmouseout = zmienKolor1;
