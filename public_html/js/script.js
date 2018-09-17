@@ -4,19 +4,23 @@
  * and open the template in the editor.
  */
 
-var x = document.createElement("p");
 
-x.style.color = "red";
-x.className = "test";
-x.innerHTML = "<p id='testowy2'>nowy test<p>";
+var tabliczkaMnozenia = "<table>";
 
-var body = document.querySelector("body");
+for (var i=1; i <= 15; i++)
+{
+    tabliczkaMnozenia += "<tr>";
+    
+    for (var j = 1; j<=10; j++)
+    
+    tabliczkaMnozenia += "<td>" + i * j + "</td>";
+    
+    tabliczkaMnozenia += "</tr>";
+    
+    
+}
+tabliczkaMnozenia += "</table>";
 
-var newChildNode = body.appendChild(x);
+var rezultat = document.getElementById("rezultat");
 
-var testowy2 = document.getElementById("testowy2");
-testowy2.style.color = "green";
-
-
-var kursyProgramowania = document.getElementById("kursyProgramowania");
-kursyProgramowania.parentNode.removeChild(kursyProgramowania);
+rezultat.innerHTML = tabliczkaMnozenia;
