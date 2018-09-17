@@ -5,22 +5,7 @@
  */
 
 
-var tabliczkaMnozenia = "<table>";
-
-for (var i=1; i <= 15; i++)
+function wypiszTekst(tekst)
 {
-    tabliczkaMnozenia += "<tr>";
-    
-    for (var j = 1; j<=10; j++)
-    
-    tabliczkaMnozenia += "<td>" + i * j + "</td>";
-    
-    tabliczkaMnozenia += "</tr>";
-    
-    
+    alert(tekst + "!!!!");
 }
-tabliczkaMnozenia += "</table>";
-
-var rezultat = document.getElementById("rezultat");
-
-rezultat.innerHTML = tabliczkaMnozenia;
