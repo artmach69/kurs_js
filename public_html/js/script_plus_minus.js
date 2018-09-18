@@ -16,24 +16,30 @@ function pomniejszFont()
     test.className = "pomniejszFont";
 }
 */
+
+function powieksz2() {
+    test.classList.append("")
+    test.classList.remove("")
+}
+
 var size = 16;
 
 function powiekszFont() {
 
- test.style.fontSize = size++ + 'px';
+ test.style.fontSize = ++size + 'px';
 
 }
 
 function pomniejszFont() {
 
- test.style.fontSize = size-- + 'px';
+ test.style.fontSize = --size + 'px';
 
 }
 
 
-var test = document.getElementById("test");
-var powieksz = document.getElementById("przycisk+");
-var pomniejsz = document.getElementById("przycisk-");
+var test = document.querySelector("#test");
+var powieksz = document.querySelector("#enlarge");
+var pomniejsz = document.querySelector("#decrease");
 
 
 powieksz.onclick = powiekszFont;
