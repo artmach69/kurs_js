@@ -6,7 +6,7 @@
 
 
 
-function powiekszFont()
+/*function powiekszFont()
 {
     test.className = "powiekszFont";
 }
@@ -14,6 +14,20 @@ function powiekszFont()
 function pomniejszFont()
 {
     test.className = "pomniejszFont";
+}
+*/
+var size = 16;
+
+function powiekszFont() {
+
+ test.style.fontSize = size++ + 'px';
+
+}
+
+function pomniejszFont() {
+
+ test.style.fontSize = size-- + 'px';
+
 }
 
 
