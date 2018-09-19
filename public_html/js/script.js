@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-function wykonaj(event)
+function wykonaj(event, str)
 {
     var e = event || window.event;
      
     var tmp = document.querySelector("#tmp");
     
-    tmp.innerHTML = e.clientX;
+    tmp.innerHTML = e.clientX + "" + str;
     
     
     var tooltip = document.querySelector("#tooltip");
@@ -26,6 +26,9 @@ window.onload = function ()
 {
 var test = document.querySelector("#test");
 
-test.onmousemove = wykonaj;
+test.onmousemove = function(event)
+{
+    wykonaj(event, "tekst dodatkowy");
+};
 };
 
