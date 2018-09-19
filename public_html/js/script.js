@@ -25,11 +25,17 @@ window.onload = function ()
 
 {
 var test = document.querySelector("#test");
+var stop = document.querySelector("#stop");
     //test.onmouseover = zmienKolor;
     //test.onmouseout = zmienKolor2;
     
     test.addEventListener("mouseover", zmienKolor);
     test.addEventListener("mouseover", powiekszCzcionke);
+    
+    stop.addEventListener("click", function ()
+    {
+    test.removeEventListener("mouseover", powiekszCzcionke);    
+    });
    
 };
 
