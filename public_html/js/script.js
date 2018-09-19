@@ -6,8 +6,19 @@
 
 function wykonaj(event)
 {
+    var e = event || window.event;
+     
     var tmp = document.querySelector("#tmp");
-    tmp.innerHTML = event;
+    
+    tmp.innerHTML = e.clientX;
+    
+    
+    var tooltip = document.querySelector("#tooltip");
+     tooltip.style.display = "block";
+     tooltip.style.left = e.clientX + 10 + "px";
+     tooltip.style.top= e.clientY + +10 + "px";
+    
+    
 }
 
 window.onload = function ()

@@ -23,3 +23,11 @@ and open the template in the editor.
     font-size: smaller;
 }
 
+#tooltip
+{
+    display: none;
+    background-color: teal;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+}
