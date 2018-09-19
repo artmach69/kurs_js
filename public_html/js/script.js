@@ -4,6 +4,14 @@
  * and open the template in the editor.
  */
 
+function createEvent (obj, eventName, functionToInvoke)
+{
+    if (document.addEventListener)
+        obj.addEventListener(eventName, functionToInvoke);
+    else
+        obj.attachEvent("on", eventName, functionToInvoke);
+}
+
 function zmienKolor()
 {
     this.className = "zmienKolor";
@@ -26,11 +34,14 @@ window.onload = function ()
 {
 var test = document.querySelector("#test");
 var stop = document.querySelector("#stop");
-    //test.onmouseover = zmienKolor;
-    //test.onmouseout = zmienKolor2;
+  
+    createEvent(test, "mouseover", zmienKolor);
+    createEvent(test, "mouseover", powiekszCzcionke);
     
-    test.addEventListener("mouseover", zmienKolor);
-    test.addEventListener("mouseover", powiekszCzcionke);
+    
+    //test.addEventListener("mouseover", zmienKolor);
+    //test.addEventListener("mouseover", powiekszCzcionke);
+    
     
     stop.addEventListener("click", function ()
     {
