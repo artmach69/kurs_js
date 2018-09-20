@@ -8,6 +8,9 @@ function stopwatch(uchwytStopera, liczba)
 {
     uchwytStopera.innerHTML = --liczba;
     
+    if (liczba <= 0 )
+        return;
+    
     setTimeout(function()
     {
       stopwatch(uchwytStopera, liczba);  
@@ -16,7 +19,7 @@ function stopwatch(uchwytStopera, liczba)
 
 window.onload = function()
 {
-    var poczatkowaWartosc = document.querySelector("#poczatkowaWartosc").value;
+    
     var przyciskOdpalStoper = document.querySelector("#przyciskOdpalStoper"); 
     var przyciskZatrzymajStoper = document.querySelector("#przyciskZatrzymajStoper");
     var uchwytStopera = document.querySelector("#uchwytStopera");
@@ -24,6 +27,7 @@ window.onload = function()
     
     przyciskOdpalStoper.onclick = function()
     {
+        var poczatkowaWartosc = document.querySelector("#poczatkowaWartosc").value;
         uchwytStopera.innerHTML = poczatkowaWartosc;
        setInterval(function()
        {
