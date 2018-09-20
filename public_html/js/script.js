@@ -40,4 +40,8 @@ window.onload = function()
         timeOutStoper = stopwatch(uchwytStopera, poczatkowaWartosc);
 
     };
+    przyciskZatrzymajStoper.onclick = function ()
+    {
+        clearTimeout(timeOutStoper);
+    }
 };
