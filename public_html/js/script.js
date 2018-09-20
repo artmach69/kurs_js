@@ -4,34 +4,32 @@
  * and open the template in the editor.
  */
 
-function movingImage(e, objToMove)
+function stopwatch(uchwytStopera, liczba)
 {
-     objToMove.style.left = e.clientX - objToMove.width/2 + "px"; 
-     objToMove.style.top = e.clientY - objToMove.height/2 + "px"; 
+    uchwytStopera.innerHTML = --liczba;
+    
+    setTimeout(function()
+    {
+      stopwatch(uchwytStopera, liczba);  
+    }, 1000);
 }
 
 window.onload = function()
-
 {
-var wykrzyknik = document.querySelector("#wykrzyknik");
-
-wykrzyknik.onmousedown = function()
-{
-    var self = this;
-    document.onmousemove = function(e)
+    var poczatkowaWartosc = document.querySelector("#poczatkowaWartosc").value;
+    var przyciskOdpalStoper = document.querySelector("#przyciskOdpalStoper"); 
+    var przyciskZatrzymajStoper = document.querySelector("#przyciskZatrzymajStoper");
+    var uchwytStopera = document.querySelector("#uchwytStopera");
+    
+    
+    przyciskOdpalStoper.onclick = function()
     {
-     movingImage(e, self);
-    }
-};
-
-wykrzyknik.onmouseup = function()
-{
-   document.onmousemove = null;
-};
-
-wykrzyknik.ondragstart = function(e)
-{
-    e.preventDefault();
-};
-
+        uchwytStopera.innerHTML = poczatkowaWartosc;
+       setInterval(function()
+       {
+           
+       stopwatch(uchwytStopera, poczatkowaWartosc);
+       
+       }, 1000);
+    };
 };
