@@ -4,30 +4,34 @@
  * and open the template in the editor.
  */
 
-window.onload = function ()
+function movingImage(e, objToMove)
+{
+     objToMove.style.left = e.clientX - objToMove.width/2 + "px"; 
+     objToMove.style.top = e.clientY - objToMove.height/2 + "px"; 
+}
+
+window.onload = function()
 
 {
- var toTopButton = document.querySelector("#toTopButton");
- 
- 
-    window.onscroll = function()
+var wykrzyknik = document.querySelector("#wykrzyknik");
+
+wykrzyknik.onmousedown = function()
+{
+    var self = this;
+    document.onmousemove = function(e)
     {
-       var test = document.querySelector("#test");
-       var toTopButton = document.querySelector("#toTopButton");
-       
-       var yScrollAxis = window.pageYOffset;
-       
-        if (yScrollAxis > 300)
-            toTopButton.style.display = "block";
-        else
-            toTopButton.style.display = "none";
-       
-       test.innerHTML = yScrollAxis;
-    };
- 
- toTopButton.onclick = function()
- {
-    window.scrollBy(0, -1 * window.pageYOffset); 
- };
+     movingImage(e, self);
+    }
 };
 
+wykrzyknik.onmouseup = function()
+{
+   document.onmousemove = null;
+};
+
+wykrzyknik.ondragstart = function(e)
+{
+    e.preventDefault();
+};
+
+};
