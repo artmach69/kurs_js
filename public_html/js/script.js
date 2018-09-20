@@ -4,17 +4,21 @@
  * and open the template in the editor.
  */
 
+var timeOutStoper;
+
+
 function stopwatch(uchwytStopera, liczba)
 {
-    uchwytStopera.innerHTML = --liczba;
+    uchwytStopera.innerHTML = liczba--;
     
-    if (liczba <= 0 )
+    if (liczba < 0 )
         return;
     
-    setTimeout(function()
+    timeOutStoper = setTimeout(function()
     {
       stopwatch(uchwytStopera, liczba);  
     }, 1000);
+    return timeOutStoper;
 }
 
 window.onload = function()
@@ -29,11 +33,11 @@ window.onload = function()
     {
         var poczatkowaWartosc = document.querySelector("#poczatkowaWartosc").value;
         uchwytStopera.innerHTML = poczatkowaWartosc;
-       setInterval(function()
-       {
-           
-       stopwatch(uchwytStopera, poczatkowaWartosc);
        
-       }, 1000);
+        if (timeOutStoper)
+            clearTimeout(timeOutStoper);
+        
+        timeOutStoper = stopwatch(uchwytStopera, poczatkowaWartosc);
+
     };
 };
