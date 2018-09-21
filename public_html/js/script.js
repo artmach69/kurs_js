@@ -11,6 +11,12 @@ window.onload = function()
 {
     var poleLiczbowe = document.querySelector("#myForm").poleLiczbowe;
     var poleTekstowe = document.querySelector("#myForm").poleTekstowe;
+    
+    
     var info = document.querySelector("#info");
-    poleLiczbowe.value = "abc";
+    var i = 0;
+    poleLiczbowe.onkeypress = function(e)
+    {
+        info.innerHTML = e.which;
+    };
 };
