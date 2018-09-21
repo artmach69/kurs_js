@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 
-
+function isNumber(valueToCheck)
+{
+    return !isNaN(valueToCheck);
+}
 
 
 window.onload = function()
@@ -15,8 +18,23 @@ window.onload = function()
     
     var info = document.querySelector("#info");
     var i = 0;
-    poleLiczbowe.onkeypress = function(e)
+    poleLiczbowe.onkeyup = function(e)
     {
-        info.innerHTML = e.which;
+        
+        var wpisanyZnak = e.which;
+        
+        if (isNumber (yhis.value))
+        {
+        this.style.backgroundColor = "green";
+        info.innerHTML = "";
+        
+        }
+        else
+        {    
+        e.preventDefault();
+        this.style.backgroundColor = "red";
+        info.innerHTML = "Niepoprawny format, pole przyjmuje tylko liczby";
+        }     
+     
     };
 };
