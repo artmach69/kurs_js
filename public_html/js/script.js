@@ -4,48 +4,27 @@
  * and open the template in the editor.
  */
 
-function isNumber(valueToCheck)
-{
-    return !isNaN(valueToCheck);
-}
 
 
 window.onload = function()
 {
-    var poleLiczbowe = document.querySelector("#myForm").poleLiczbowe;
-    var poleTekstowe = document.querySelector("#myForm").poleTekstowe;
-    var submitMyForm = document.querySelector("#myForm").submitMyForm;
+    var myForm = document.querySelector("#myForm");
+    var submitButton = document.querySelector("#myForm").submitButton;
     
     
     var info = document.querySelector("#info");
-    var i = 0;
-    var isEverythingOK = true;
-    
-    
-    poleLiczbowe.onkeyup = function(e)
+
+    submitButton.onclick = function (e)
     {
-        
-        var wpisanyZnak = e.which;
-        
-        if (isNumber (this.value))
+        var tmpString = "";
+        for(var i=1; i < myForm.nazwaKursu.length; i++)
         {
-        this.style.backgroundColor = "green";
-        info.innerHTML = "";
-        isEverythingOK = true;
+        if (myForm.nazwaKursu[i].checked)
+        tmpString += myForm.nazwaKursu[i].value;
+        };
+        info.innerHTML += tmpString + "<br>";
         
-        }
-        else
-        {    
         e.preventDefault();
-        this.style.backgroundColor = "red";
-        info.innerHTML = "Niepoprawny format, pole przyjmuje tylko liczby";
-        isEverythingOK = false;
-        }     
-     
     };
-    submitMyForm.onclick = function (e)
-    {
-        if(isEverythingOK)
-        e.preventDefault();
-    }
+    
 };
