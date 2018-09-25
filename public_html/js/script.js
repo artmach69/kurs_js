@@ -4,27 +4,35 @@
  * and open the template in the editor.
  */
 
-
-
 window.onload = function()
 {
-    var myForm = document.querySelector("#myForm");
-    var submitButton = document.querySelector("#myForm").submitButton;
+   var myForm = document.getElementById("myForm");
+   var submitButton = document.getElementById("myForm").submitButton;
+   
+   var info = document.getElementById("info");
+   
+   submitButton.onclick = function(e)
+   {
+       var tmpString = "";
+       for (var i = 0; i < myForm.nazwaKursu.length; i++)
+       {           
+           if (myForm.nazwaKursu[i].checked)
+             tmpString += myForm.nazwaKursu[i].value + " ";       
+       }
+       
+       info.innerHTML += tmpString + "<br>";
+       
+       e.preventDefault();
     
+   };
     
-    var info = document.querySelector("#info");
-
-    submitButton.onclick = function (e)
+    for (var i = 0; i < myForm.akceptacjaRegulaminu.length; i++)
     {
-        var tmpString = "";
-        for(var i=1; i < myForm.nazwaKursu.length; i++)
+        myForm.akceptacjaRegulaminu[i].onclick = function() 
         {
-        if (myForm.nazwaKursu[i].checked)
-        tmpString += myForm.nazwaKursu[i].value;
+           submitButton.disabled = this.value === "true"; 
         };
-        info.innerHTML += tmpString + "<br>";
-        
-        e.preventDefault();
-    };
-    
-};
+    }    
+  
+      
+   };
