@@ -6,13 +6,14 @@
 
 window.onload = function()
 {
-   var myForm = document.getElementById("myForm");
    var info = document.getElementById("info");
+   
+   info.innerHTML = "To jest tekst, taki sobie tekst, być może tekst, a może \
+już nie...";
+    var tmp = "arkAdiUsz";
+  tmp = tmp.charAt(0).toUpperCase() + tmp.slice(1).toLowerCase();
   
-myForm.videoKursy.selectedIndex = 3;
-myForm.videoKursy.onchange = function()
-{
-  info.innerHTML = this.value;  
-}
-
+  var link = "http://www.videokurs.pl/video-kurs-php.html";
+  
+   info.innerHTML = link.slice(link.lastIndexOf("/")+1, 29);
 };
