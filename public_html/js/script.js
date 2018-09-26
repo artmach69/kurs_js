@@ -15,13 +15,13 @@ już nie...";
   
   var link = "http://www.videokurs.pl/video-kurs-php.html";
   
-  var tmpString = "XHTML PHP MYSQL Javascript";
+  var tmpString = "     XHTML PHP MYSQL Javascript      ";
   
-  var tmpArray = tmpString.split(' ');
+  /*var tmpArray = tmpString.split(' ');
   
     tmpArray[1] = "PDO";
     
-    var resultString = tmpArray.join(',');
+    var resultString = tmpArray.join(','); */
   
-   info.innerHTML = resultString;
+   info.innerHTML = tmpString.replace('MYSQL', 'PDP');
 };
