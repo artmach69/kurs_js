@@ -10,10 +10,14 @@ window.onload = function()
    
    var indeksy = "A-56 B-12 K-51 A-53 A45 A#56 A.67";
    
-   var imie = "arkadiusz";
+   var imie = "ZZarkaa";
    
-   var result = imie.match(/[a-z]/g) 
+   var result = indeksy.match(/A\.?\d{1,}/g);
            //indeksy.match(/A\.?[0-9]{1,}/g);
-   info.innerHTML = result.join("<br>");
+           
+           
+ var d = "AlaArkadiusz";
+ var e =d.replace(/(A)(l)(a)/gi, "$3$2$1");
+   info.innerHTML = e;
    
 };
