@@ -8,9 +8,12 @@ window.onload = function()
 {
    var info = document.getElementById("info");
    
-   var indeksy = "A-56 B-12 K-51 A-53";
+   var indeksy = "A-56 B-12 K-51 A-53 A45 A#56 A.67";
    
-   var result = indeksy.match(/[0-9]{1,}/g);
-   info.innerHTML = result;
+   var imie = "arkadiusz";
+   
+   var result = imie.match(/[a-z]/g) 
+           //indeksy.match(/A\.?[0-9]{1,}/g);
+   info.innerHTML = result.join("<br>");
    
 };
