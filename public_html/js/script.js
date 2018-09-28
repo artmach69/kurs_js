@@ -8,21 +8,9 @@ window.onload = function()
 {
    var info = document.getElementById("info");
    
-   var indeksy = "A-56 B-12 K-51 A-53 A45 A#56 A.67";
+   var pw = "abcd4efghi";
    
-   var regExp = /A\.?\d{1,}/g;
-   var row = "";
-    var result = ""; 
-           
-    while (row = regExp.exec(indeksy))
-    {
-        result += row + " ";
-    }
-   
-   var kodPocztowy = "32-700";
-   
-   var czyKodPocztowy = /[0-9]{2}-{0,1}[0-9]{3}/.test(kodPocztowy);
-   
-   info.innerHTML = czyKodPocztowy;
+   var regExpPattern = /(?=.*[0-9]).{7,}/;
+   info.innerHTML = regExpPattern.test(pw);
    
 };
