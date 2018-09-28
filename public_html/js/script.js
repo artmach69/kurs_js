@@ -10,14 +10,19 @@ window.onload = function()
    
    var indeksy = "A-56 B-12 K-51 A-53 A45 A#56 A.67";
    
-   var imie = "ZZarkaa";
+   var regExp = /A\.?\d{1,}/g;
+   var row = "";
+    var result = ""; 
+           
+    while (row = regExp.exec(indeksy))
+    {
+        result += row + " ";
+    }
    
-   var result = indeksy.match(/A\.?\d{1,}/g);
-           //indeksy.match(/A\.?[0-9]{1,}/g);
-           
-           
- var d = "AlaArkadiusz";
- var e =d.replace(/(A)(l)(a)/gi, "$3$2$1");
-   info.innerHTML = e;
+   var kodPocztowy = "32-700";
+   
+   var czyKodPocztowy = /[0-9]{2}-{0,1}[0-9]{3}/.test(kodPocztowy);
+   
+   info.innerHTML = czyKodPocztowy;
    
 };
