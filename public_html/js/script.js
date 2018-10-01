@@ -8,9 +8,15 @@ window.onload = function()
 {
    var info = document.getElementById("info");
    
-   var pw = "abcd4efghi";
+   var testButton = document.getElementById("myForm").testButton;
    
-   var regExpPattern = /(?=.*[0-9]).{7,}/;
-   info.innerHTML = regExpPattern.test(pw);
+   //var pw = "aBc4fgaą";
+   
+   testButton.onclick = function ()
+   {
+   var pw = document.getElementById("myForm").pw.value;
+   var regExpPattern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{7,}/;
+   info.innerHTML = regExpPattern.test(pw); 
+   };
    
 };
