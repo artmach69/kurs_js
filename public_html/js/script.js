@@ -12,11 +12,17 @@ window.onload = function()
    
    //var pw = "aBc4fgaą";
    
-   testButton.onclick = function ()
+   testButton.onclick = function (e)
    {
+   e.preventDefault ();
    var pw = document.getElementById("myForm").pw.value;
    var regExpPattern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{7,}/;
-   info.innerHTML = regExpPattern.test(pw); 
+   
+   if (regExpPattern.test(pw))  
+        document.getElementById("myForm").submit();
+   else
+       
+       info.innerHTML = "Hasło jest za słabe"; 
    };
    
 };
