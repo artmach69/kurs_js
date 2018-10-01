@@ -4,25 +4,38 @@
  * and open the template in the editor.
  */
 
+function getMonthFromNumber(monthNumber)
+{
+ var months = ["Styczeń", "Luty", "Marzec", "Kwieceiń", "Maj", "Czerwiec",
+               "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", 
+               "Grudzień"]; 
+           
+    return months[monthNumber];
+}
+
+function getDayFromNumber(dayNumber)
+{
+ var months = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota",
+               "Niedziela"]; 
+           
+    return months[dayNumber];
+}
+
 window.onload = function()
 {
    var info = document.getElementById("info");
    
-   var testButton = document.getElementById("myForm").testButton;
+   var dzis = new Date(); 
    
-   //var pw = "aBc4fgaą";
+   //var jutro = new Date(dzis.getTime() + 1000*60*60*24);
+   //var jutro = new Date(dzis.getFullYear(), dzis.getMonth(), dzis.getDate() +1);
+   var jutro = new Date("2018-10-01");
+   var miesiacPL = getMonthFromNumber(jutro.getMonth());
+   var dzienPL = getDayFromNumber(jutro.getDay());
    
-   testButton.onclick = function (e)
-   {
-   e.preventDefault ();
-   var pw = document.getElementById("myForm").pw.value;
-   var regExpPattern = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{7,}/;
+   info.innerHTML = dzienPL + " " + miesiacPL;
+           
+            //dzis.getDate() + "/" + (dzis.getMonth()+1) + "/" + dzis.getFullYear(); 
    
-   if (regExpPattern.test(pw))  
-        document.getElementById("myForm").submit();
-   else
-       
-       info.innerHTML = "Hasło jest za słabe"; 
-   };
    
 };
