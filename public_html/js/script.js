@@ -23,7 +23,21 @@ function Clock(elementHandler)
    };
    this.updateElementHandlerContent = function()
    {
-      this.elementHandler.innerHTML = this.actualDate.toLocaleTimeString(); 
+      this.elementHandler.innerHTML = this.getFormattedDate(); 
+   };
+   this.getFormattedDate = function()
+   {
+      var hours = this.actualDate.getHours(); 
+      var minutes = this.actualDate.getMinutes(); 
+      var seconds = this.actualDate.getSeconds();
+      
+      var suffix = "";
+      if(hours < 12)
+          suffix = "AM";
+      else
+          suffix = "PM";
+
+      return hours + ":" + minutes + ":" + seconds + " " + suffix;
    };
 }
 
